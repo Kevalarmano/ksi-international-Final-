@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSI INTERNATIONAL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background: #002244;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .hero {
+            background: url('Images/nasa-Q1p7bh3SHj8-unsplash.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            min-width: 200px;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #002244;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .services-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .service-item {
+            background: #002244;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .service-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .service-item h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown">
+            <a href="services.html">Services</a>
+            <div class="dropdown-content">
+                <a href="#">Cyber Liability</a>
+                <a href="#">Broadform Liability</a>
+                <a href="#">Professional Indemnity</a>
+                <a href="#">Medical Malpractice</a>
+                <a href="#">Directors & Officers Liability</a>
+                <a href="#">Environmental Liability</a>
+                <a href="#">Marine Insurance</a>
+                <a href="#">Engineering Insurance</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>KSI INTERNATIONAL</h1>
+            <p>Global Leaders in Risk Management and Insurance Solutions</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+    </div>
+    
+    <!-- Highlighted Cyber Liability Section (HTML + Embedded CSS) -->
+<style>
+    .highlight-service {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #002244, #003366);
+      padding: 60px 20px;
+      color: white;
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 1200px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  
+    .highlight-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+  
+    .highlight-text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+  
+    .highlight-text p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  
+    .highlight-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background-color: #ff9800;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+  
+    .highlight-btn:hover {
+      background-color: #e68900;
+    }
+  
+    .highlight-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+  
+    .highlight-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+  
+  <div class="highlight-service">
+    <div class="highlight-text">
+      <h1>Cyber Liability Protection</h1>
+      <p>Secure your business from online threats, data breaches, and cyberattacks with KSI International’s cutting-edge coverage.</p>
+      <a href="cyber-liability.html" class="highlight-btn">Learn More</a>
+    </div>
+    <div class="highlight-image">
+      <img src="Images/Cyber Liability.png" alt="Cyber Liability Image">
+    </div>
+  </div>
+  
+  <style>
+    .services-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .service-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .service-box.left {
+      flex-direction: row;
+    }
+  
+    .service-box.right {
+      flex-direction: row-reverse;
+    }
+  
+    .service-item {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+  
+    .service-item img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+  
+    .service-item h3 {
+      font-size: 24px;
+      color: #002244;
+      margin: 10px 0;
+    }
+  
+    .service-item p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .service-item button {
+      padding: 10px 20px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+  
+    .service-item button:hover {
+      background-color: #e68900;
+    }
+  
+    @media (max-width: 768px) {
+      .service-box {
+        flex-direction: column !important;
+      }
+  
+      .service-item {
+        text-align: center;
+      }
+    }
+  </style>
+  
+  <div class="services-wrapper">
+  
+    <div class="service-box left">
+      <div class="service-item">
+        <img src="Images/Broadform Liability Insurance.jpg" alt="Broadform Liability">
+      </div>
+      <div class="service-item">
+        <h3>Broadform Liability</h3>
+        <p>Covers public and product liability, ensuring businesses are protected against legal claims.</p>
+        <button>View Broadform Liability</button>
+      </div>
+    </div>
+  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      
+        .services-wrapper {
+          font-family: 'Inter', sans-serif;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          padding: 100px 20px;
+          max-width: 1300px;
+          margin: auto;
+          background: linear-gradient(to bottom, #001f3f, #003366);
+          border-radius: 30px;
+          position: relative;
+          overflow: hidden;
+        }
+      
+        .services-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -100px;
+          left: -100px;
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+          z-index: 0;
+          pointer-events: none;
+          animation: pulse 6s infinite;
+        }
+      
+        @keyframes pulse {
+          0% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.3); opacity: 0.5; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+      
+        .service-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 40px;
+          background-color: rgba(255, 255, 255, 0.07);
+          padding: 40px;
+          border-radius: 20px;
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(8px);
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+          transform: translateY(50px);
+          opacity: 0;
+          animation: fadeInUp 1s forwards;
+        }
+      
+        .service-box:nth-child(even) {
+          animation-delay: 0.2s;
+        }
+        .service-box:nth-child(odd) {
+          animation-delay: 0.4s;
+        }
+      
+        @keyframes fadeInUp {
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      
+        .service-box.left { flex-direction: row; }
+        .service-box.right { flex-direction: row-reverse; }
+      
+        .service-item {
+          flex: 1;
+        }
+      
+        .service-item img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+          transition: transform 0.4s ease;
+        }
+      
+        .service-item img:hover {
+          transform: scale(1.05);
+        }
+      
+        .service-item h3 {
+          font-size: 36px;
+          color: #ffffff;
+          margin-bottom: 20px;
+          font-weight: 800;
+        }
+      
+        .service-item p {
+          font-size: 20px;
+          line-height: 1.7;
+          color: #e0e0e0;
+          margin-bottom: 25px;
+          font-weight: 400;
+        }
+      
+        .service-item button {
+          padding: 16px 34px;
+          background: linear-gradient(to right, #fca311, #ffb703);
+          color: #000;
+          border: none;
+          border-radius: 10px;
+          font-size: 17px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+        }
+      
+        .service-item button:hover {
+          background: linear-gradient(to right, #f77f00, #ffb703);
+          transform: scale(1.08);
+        }
+      
+        @media (max-width: 768px) {
+          .service-box {
+            flex-direction: column !important;
+            text-align: center;
+            padding: 30px;
+          }
+          .service-item h3 { font-size: 26px; }
+          .service-item p { font-size: 16px; }
+          .service-item button { font-size: 15px; padding: 12px 24px; }
+        }
+      </style>
+      
+      <div class="services-wrapper">
+        <div class="service-box right">
+          <div class="service-item">
+            <img src="Images/Professional Indemnity.jpg" alt="Professional Indemnity">
+          </div>
+          <div class="service-item">
+            <h3>Professional Indemnity</h3>
+            <p>Protection for professionals against claims arising from errors, omissions, or negligence.</p>
+            <button>View Professional Indemnity</button>
+          </div>
+        </div>
+      
+        <div class="service-box left">
+          <div class="service-item">
+            <img src="Images/Medical-Malpractice.webp" alt="Medical Malpractice">
+          </div>
+          <div class="service-item">
+            <h3>Medical Malpractice</h3>
+            <p>Safeguards healthcare professionals from liability due to medical errors or negligence.</p>
+            <button>View Medical Malpractice</button>
+          </div>
+        </div>
+      
+        <div class="service-box right">
+          <div class="service-item">
+            <img src="Images/Directors & Officers Liability 2.jpg" alt="Directors & Officers Liability">
+          </div>
+          <div class="service-item">
+            <h3>Directors & Officers Liability</h3>
+            <p>Provides financial protection for company directors and officers against lawsuits.</p>
+            <button>View Directors & Liability</button>
+          </div>
+        </div>
+      
+        <div class="service-box left">
+          <div class="service-item">
+            <img src="Images/Marine Insurance.jpg" alt="Marine Insurance">
+          </div>
+          <div class="service-item">
+            <h3>Marine Insurance</h3>
+            <p>Protection for marine assets, including cargo, vessels, and offshore structures.</p>
+            <button>View Marine Insurance</button>
+          </div>
+        </div>
+      
+        <div class="service-box right">
+          <div class="service-item">
+            <img src="Images/Contact Works or Engineering Insurance.jpg" alt="Engineering Insurance">
+          </div>
+          <div class="service-item">
+            <h3>Engineering Insurance</h3>
+            <p>Coverage for infrastructure and development projects from initial build to completion.</p>
+            <button>View Engineering Insurance</button>
+          </div>
+        </div>
+      
+        <div class="service-box left">
+          <div class="service-item">
+            <img src="Images/Environmental Liability.jpg" alt="Environmental Liability">
+          </div>
+          <div class="service-item">
+            <h3>Environmental Liability</h3>
+            <p>Helps businesses manage risks and claims related to environmental damage or pollution.</p>
+            <button>View Environmental Liability</button>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+    <center>
+    <footer>
+        <p>2025 - KSI INTERNATIONAL | Created by the Armano Group | All rights reserved</p>
+    </footer>
+</center>
+
+
+</body>
+</html>
