@@ -2,143 +2,356 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KSI INTERNATIONAL | Broadform Liability</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSI INTERNATIONAL</title>
   <style>
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(135deg, #000e1a, #001f3f, #002b5c);
       color: white;
-      min-height: 100vh;
+    }
+
+    nav {
+      display: flex; justify-content: center; align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: rgba(0, 15, 35, 0.9);
+      padding: 12px 20px;
+      position: sticky; top: 0; z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #99ccff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 6px 8px;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: #99ccff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(0,15,35,0.95);
+      min-width: 200px;
+      top: 100%;
+      left: 0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: #99ccff;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(0,51,102,0.5);
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .hero-section video {
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: auto; height: 100%;
+      object-fit: cover; z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-    }
-
-    .glass-container {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 900px;
-      width: 90%;
+      justify-content: center;
+      height: 100%;
       text-align: center;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-      animation: fadeIn 1.5s ease;
-      margin: 60px 0;
+      color: #e0f7ff;
+      backdrop-filter: blur(6px);
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+
+    .button-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .service-button {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      padding: 12px 20px;
-      border-radius: 12px;
-      text-decoration: none;
+      background: rgba(153,204,255,0.1);
+      border: 1px solid rgba(153,204,255,0.3);
+      color: #cce6ff;
+      padding: 10px 20px;
+      border-radius: 10px;
       font-weight: bold;
-      margin: 10px;
-      display: inline-block;
-      backdrop-filter: blur(8px);
-      transition: background 0.3s ease;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     .service-button:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(153,204,255,0.3);
     }
 
-    .content {
+    .glass-container {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(14px);
+      padding: 40px 20px;
+      border-radius: 20px;
+      margin: 40px auto;
+      max-width: 1200px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .service-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      color: #cce6ff;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #e6f2ff;
+    }
+
+    .modal {
       display: none;
-      animation: fadeIn 1s ease-in-out;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
     }
 
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 15px 0;
-    }
-
-    .back-button {
-      margin-top: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+    .modal-content {
+      background: #001933;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
       color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
+    }
+
+    .modal-close {
+      text-align: right;
+      font-size: 1.2rem;
       cursor: pointer;
     }
 
-    .back-button:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .signup-section, .ask-section {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+    .signup-section h2, .ask-section h2 {
+      text-align: center;
+      color: #99ccff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      padding: 10px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0059b3;
+    }
+
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
-<nav>
+<body>
+
+  <nav>
     <a href="index.html">Home</a>
     <a href="about us.html">About Us</a>
     <a href="contact.html">Contact</a>
     <div class="dropdown">
-        <a href="services.html">Services</a>
-        <div class="dropdown-content">
-            <a href="#">Cyber Liability</a>
-            <a href="#">Broadform Liability</a>
-            <a href="#">Professional Indemnity</a>
-            <a href="#">Medical Malpractice</a>
-            <a href="#">Directors & Officers Liability</a>
-            <a href="#">Environmental Liability</a>
-            <a href="#">Marine Insurance</a>
-            <a href="#">Engineering Insurance</a>
-            <a href="cyber-liability.html">Cyber Liability</a>
-        </div>
+      <a href="#services" class="nav-link">Services</a>
+      <div class="dropdown-content">
+        <a href="#">Cyber Liability</a>
+        <a href="#">Broadform Liability</a>
+        <a href="#">Professional Indemnity</a>
+        <a href="#">Medical Malpractice</a>
+        <a href="#">Directors & Officers Liability</a>
+        <a href="#">Environmental Liability</a>
+        <a href="#">Marine Insurance</a>
+        <a href="#">Engineering Insurance</a>
+      </div>
     </div>
-</nav>
-<body>
-  <!-- Home Section -->
-  <div class="glass-container" id="main">
-    <h1>KSI INTERNATIONAL</h1>
-    <p>Explore our professional liability services. Click below to learn more:</p>
-    <a class="service-button" onclick="showBroadform()">View Broadform Liability</a>
+  </nav>
+
+  <section class="hero-section">
+    <video autoplay muted loop playsinline src="videos/hero-blue.mp4"></video>
+    <div class="hero-content">
+      <h1>Welcome to KSI INTERNATIONAL</h1>
+      <div class="button-row">
+        <a href="#services"><button class="service-button">Our Services</button></a>
+        <a href="#signup"><button class="service-button">Sign Up</button></a>
+        <a href="#ask"><button class="service-button">Ask Me a Question</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="glass-container">
+    <h1 style="text-align:center;">Our Services</h1>
+    <div class="service-grid">
+      <div class="service-card" onclick="openModal('Cyber Liability helps mitigate digital threats and cover recovery costs.')">
+        <h2>Cyber Liability</h2>
+        <p>Protects your business from digital threats, data breaches, and cyber extortion.</p>
+      </div>
+      <div class="service-card" onclick="openModal('Broadform Liability covers public, product, and advertising liability risks.')">
+        <h2>Broadform Liability</h2>
+        <p>Comprehensive cover for public, product, and advertising-related liabilities.</p>
+      </div>
+      <div class="service-card" onclick="openModal('PI insurance protects against claims of negligence and mistakes.')">
+        <h2>Professional Indemnity</h2>
+        <p>Protects professionals against claims for errors, omissions, or negligence.</p>
+      </div>
+      <div class="service-card" onclick="openModal('Medical Malpractice insurance protects healthcare providers.')">
+        <h2>Medical Malpractice</h2>
+        <p>Coverage for medical professionals against patient injury claims.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="signup-section">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section id="ask" class="ask-section">
+    <h2>Ask Me a Question</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Question" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal()">&times;</div>
+      <p id="modal-text"></p>
+    </div>
   </div>
 
-  <!-- Broadform Liability Section -->
-  <div class="glass-container content" id="broadformContent">
-    <h1>Broadform Liability</h1>
-    <p>
-      Broadform Liability insurance is a comprehensive form of public liability coverage designed to protect businesses against a wide range of third-party risks. This policy covers claims arising from personal injury, property damage, and legal costs incurred as a result of the insured’s business activities. What sets Broadform Liability apart is its wider scope—it often includes product liability, advertising liability, and coverage for incidents not typically included in standard liability policies.
-    </p>
-    <p>
-      It is particularly useful for businesses operating in complex environments, where exposure to multiple forms of risk is significant. Whether you manage a construction site, provide professional services, or manufacture goods, Broadform Liability provides peace of mind by offering strong protection against unforeseen claims. At KSI INTERNATIONAL, we tailor policies to suit your unique risk profile, ensuring you have the right level of cover to operate confidently.
-    </p>
-    <button class="back-button" onclick="goBack()">← Back</button>
-  </div>
-
-  <!-- JavaScript -->
   <script>
-    function showBroadform() {
-      document.getElementById('main').style.display = 'none';
-      document.getElementById('broadformContent').style.display = 'block';
+    function openModal(text) {
+      document.getElementById('modal-text').innerText = text;
+      document.getElementById('modal').style.display = 'flex';
     }
 
-    function goBack() {
-      document.getElementById('broadformContent').style.display = 'none';
-      document.getElementById('main').style.display = 'block';
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
     }
+
+    const links = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.pageYOffset;
+      links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section && section.offsetTop - 100 <= scrollY) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
   </script>
+
 </body>
 </html>
