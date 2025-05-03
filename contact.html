@@ -2,220 +2,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - KSI INTERNATIONAL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --nav-bg: #001f3f;
-      --accent: #0099ff;
-      --text-light: #f4f6f8;
-      --text-dark: #ffffff;
-      --card-bg: rgba(255, 255, 255, 0.1);
+      --main-bg: #001933;
+      --accent: #00bcd4;
+      --hover: #007bff;
+      --text: #ffffff;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
+      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #f0f2f5;
-      color: var(--text-dark);
+      background: #f4f4f4;
+      color: #333;
     }
-    .banner {
-      background: url('Images/contact-banner.jpg') center/cover no-repeat;
-      height: 200px;
-      position: relative;
-    }
-    .banner::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 15, 63, 0.6);
-    }
+
+    /* Navbar */
     nav {
-      background: var(--nav-bg);
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      background-color: var(--main-bg);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .navbar {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .navbar a {
-      color: var(--text-light);
+
+    nav a {
+      color: var(--text);
+      margin: 0 20px;
       text-decoration: none;
-      padding: 10px 18px;
       font-weight: 600;
-      transition: background 0.3s;
-      border-radius: 4px;
+      font-size: 16px;
+      transition: color 0.3s;
     }
-    .navbar a:hover {
-      background: var(--accent);
+
+    nav a:hover {
+      color: var(--accent);
     }
-    .dropdown { position: relative; }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 120%;
-      left: 0;
-      background: var(--nav-bg);
-      border-radius: 4px;
+      background-color: var(--main-bg);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      top: 100%;
+      left: 0;
     }
-    .dropdown:hover .dropdown-content { display: block; }
+
     .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
       display: block;
-      padding: 10px 15px;
-      color: var(--text-light);
+      text-align: left;
+      transition: background 0.3s;
     }
+
     .dropdown-content a:hover {
-      background: var(--accent);
+      background-color: var(--hover);
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
-    .contact-info {
+
+    /* Banner */
+    .banner {
+      background: url('Images/contact-banner.jpg') no-repeat center center/cover;
+      height: 200px;
       display: flex;
-      flex-wrap: wrap;
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 20px;
-      gap: 20px;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
-    .contact-info img {
-      width: 180px;
-      height: 180px;
-      border-radius: 8px;
-      object-fit: cover;
+
+    .banner h1 {
+      font-size: 36px;
     }
-    .contact-details {
-      flex: 1;
-      color: var(--nav-bg);
-    }
-    .contact-details h2 { margin-bottom: 10px; }
-    .contact-details p { margin-bottom: 8px; }
-    #map-iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 8px;
-      margin: 30px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .message-form {
-      background: var(--card-bg);
+
+    /* Main Container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       margin-bottom: 40px;
     }
-    .message-form h3 {
-      margin-bottom: 15px;
-      color: var(--nav-bg);
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
     }
-    .message-form input,
-    .message-form textarea {
+
+    .contact-section img {
+      width: 280px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .contact-details {
+      flex: 1;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    /* Form */
+    form input, form textarea {
       width: 100%;
       padding: 12px;
-      margin-bottom: 15px;
+      margin-top: 10px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
+      font-size: 15px;
     }
-    .message-form button {
-      background: var(--accent);
-      color: var(--text-dark);
-      padding: 12px 20px;
+
+    form button {
+      margin-top: 15px;
+      background-color: var(--main-bg);
+      color: white;
       border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      padding: 12px 20px;
       font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
     }
-    .message-form button:hover {
-      background: #0088cc;
+
+    form button:hover {
+      background-color: var(--hover);
     }
-    footer {
-      background: var(--nav-bg);
-      color: var(--text-light);
+
+    /* Map */
+    .map-frame {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--main-bg);
+      color: var(--text);
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
+      margin-top: 40px;
     }
-    @media (max-width: 600px) {
-      .contact-info { flex-direction: column; }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+
+      .contact-section img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Banner -->
-  <div class="banner"></div>
-
   <!-- Navbar -->
   <nav>
-    <ul class="navbar">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about us.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li class="dropdown">
-        <a href="services.html">Services ▼</a>
-        <div class="dropdown-content">
-          <a href="#">Cyber Liability</a>
-          <a href="#">Broadform Liability</a>
-          <a href="#">Professional Indemnity</a>
-          <a href="#">Medical Malpractice</a>
-          <a href="#">Directors & Officers</a>
-          <a href="#">Environmental Liability</a>
-          <a href="#">Marine Insurance</a>
-          <a href="#">Engineering Insurance</a>
-        </div>
-      </li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+      <a href="#">Services ▼</a>
+      <div class="dropdown-content">
+        <a href="cyber.html">Cyber Liability</a>
+        <a href="broadform.html">Broadform Liability</a>
+        <a href="pi.html">Professional Indemnity</a>
+        <a href="medical.html">Medical Malpractice</a>
+        <a href="directors.html">Directors & Officers</a>
+        <a href="environmental.html">Environmental Liability</a>
+        <a href="marine.html">Marine Insurance</a>
+        <a href="engineering.html">Engineering Insurance</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Main Container -->
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Contact KSI INTERNATIONAL</h1>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <img src="contact.html" alt="Our Office" />
+
+    <div class="card contact-section">
+      <img src="Images/markus-winkler-q3QPw37J6Xs-unsplash.jpg" alt="KSI Office">
       <div class="contact-details">
-        <h2>Get in Touch</h2>
-        <p><strong>Address:</strong><br>Suite 4, Sarabeah House,<br>333 Randles Road, Overport, Durban 4091</p>
-        <p><strong>Mobile:</strong> (+27) 064 626 6242</p>
-        <p><strong>Phone:</strong> (+27) 031 207 8787</p>
-        <p><strong>Email:</strong> contact@ksi-international.com</p>
+        <p><strong>Address:</strong><br>
+        Suite 4, Sarabeah House,<br>
+        333 Randles Road, Overport, 4091<br>
+        Durban, South Africa</p>
+        <p><strong>Mobile:</strong> +27 64 626 6242</p>
+        <p><strong>Phone:</strong> +27 31 207 8787</p>
+        <p><strong>Email:</strong> armano.international@gmail.com</p>
       </div>
     </div>
 
-    <!-- OpenStreetMap Embed -->
-    <iframe
-      id="map-iframe"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=31.0039%2C-29.855%2C31.0165%2C-29.845&layer=mapnik&marker=-29.8505%2C31.0100"
+    <!-- Map -->
+    <iframe 
+      class="map-frame"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=31.0060%2C-29.8600%2C31.0140%2C-29.8500&marker=-29.8545%2C31.0100"
       allowfullscreen>
     </iframe>
-    <p style="text-align:center; margin-bottom:40px; color: #002244;"><a href="https://www.openstreetmap.org/?mlat=-29.8505&mlon=31.0100#map=16/-29.8505/31.0100" target="_blank">View Larger Map</a></p>
+    <p style="text-align: center; margin-top: 8px;">
+      <a href="https://www.openstreetmap.org/?mlat=-29.8545&mlon=31.0100#map=16/-29.8545/31.0100" target="_blank" style="color: var(--main-bg); font-weight: bold;">
+        View Larger Map
+      </a>
+    </p>
 
-    <!-- Contact Form -->
-    <div class="message-form">
-      <h3>Send Us a Message</h3>
+    <!-- Form -->
+    <div class="card">
+      <h2>Send Us a Message</h2>
       <form action="mailto:armano.international@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer>
-    © 2025 KSI INTERNATIONAL | Created by the Armano Group | All rights reserved
+  <footer class="footer">
+    <p>© 2025 KSI INTERNATIONAL | Created by the Armano Group | All rights reserved</p>
   </footer>
 
 </body>
