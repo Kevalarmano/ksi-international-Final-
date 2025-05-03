@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Malpractice | KSI INTERNATIONAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #001f3f, #003366);
+      color: #e0f7ff;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 31, 63, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .logo { font-weight: 700; font-size: 1.5rem; color: #99ccff; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #99ccff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #cce6ff;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #99ccff;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: rgba(0, 31, 63, 0.95); position: absolute; top: 70px; right: 2rem; width: 200px; padding: 1rem; border-radius: 10px; }
+      nav ul.active { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec7c8d1abf36') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0,0,50,0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .content, .form-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .content img, .content video {
+      max-width: 100%;
+      border-radius: 16px;
+      margin: 20px 0;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #99ccff;
+    }
+    p {
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: rgba(0, 51, 102, 0.3);
+      color: #fff;
+    }
+    button {
+      background: #005c99;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">KSI INTERNATIONAL</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Medical Malpractice Insurance</h1>
+  </section>
+
+  <section class="content">
+    <h2>Comprehensive Protection for Medical Professionals</h2>
+    <p>Medical Malpractice insurance is a critical safeguard for healthcare professionals and institutions. It provides financial coverage in the event of lawsuits or claims stemming from alleged medical negligence, errors, or omissions during treatment. Whether it’s a misdiagnosis, surgical mistake, or incorrect prescription, even the most experienced professionals can face legal action.</p>
+    <p>At KSI INTERNATIONAL, we understand the intricacies of the medical industry. Our tailored policies ensure that both individual practitioners and healthcare facilities are protected against potential litigation, compensation demands, and the reputational damage that can follow a malpractice claim.</p>
+    <video autoplay muted loop playsinline src="videos/medical-excellence.mp4"></video>
+    <p>We provide legal support, cover court fees, and assist in settlements, allowing our clients to continue delivering care with confidence. With our global expertise, we also provide regulatory compliance advice across jurisdictions.</p>
+    <img src="https://images.unsplash.com/photo-1588776814626-56b1a22a9996" alt="Medical practice" />
+    <p>Medical Malpractice insurance isn’t just about protection — it’s about peace of mind. Knowing you're supported by a robust policy allows you to focus on patient care without distraction. With over 500 words of informative, industry-driven insights, we aim to empower the healthcare community with clarity and confidence in their coverage.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+  </section>
+
+  <section class="form-section">
+    <h2>Ask Us a Question</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Type your question here..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector('nav ul');
+      navList.classList.toggle('active');
+    }
+
+    ScrollReveal().reveal('.hero h1', { delay: 200, origin: 'top', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('.content', { delay: 300, origin: 'bottom', distance: '50px', duration: 1200 });
+    ScrollReveal().reveal('.form-section', { delay: 400, origin: 'left', distance: '50px', duration: 1000 });
+  </script>
+</body>
+</html>
+
