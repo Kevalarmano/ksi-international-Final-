@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directors & Officers Liability | KSI INTERNATIONAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #001d3d, #003366);
+      color: #e0f7ff;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 29, 61, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .logo { font-weight: 700; font-size: 1.5rem; color: #99ccff; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #99ccff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #cce6ff; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .bar {
+      width: 25px; height: 3px; background-color: #99ccff;
+      margin: 4px 0; transition: 0.4s;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none; flex-direction: column;
+        background: rgba(0, 29, 61, 0.95);
+        position: absolute; top: 70px; right: 2rem;
+        width: 200px; padding: 1rem; border-radius: 10px;
+      }
+      nav ul.active { display: flex; }
+      .hamburger { display: flex; }
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4') no-repeat center center/cover;
+      height: 70vh; display: flex; justify-content: center;
+      align-items: center; text-align: center; color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem; background: rgba(0,0,50,0.6);
+      padding: 20px; border-radius: 10px;
+    }
+    .content, .form-section {
+      max-width: 900px; margin: 4rem auto; padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .content img, .content video {
+      max-width: 100%; border-radius: 16px; margin: 20px 0;
+    }
+    h2 { font-size: 2rem; color: #99ccff; }
+    p { line-height: 1.6; margin: 1rem 0; }
+    form input, form textarea {
+      width: 100%; padding: 12px; margin: 10px 0;
+      border: none; border-radius: 6px;
+      background: rgba(0, 51, 102, 0.3); color: #fff;
+    }
+    button {
+      background: #005c99; color: white;
+      border: none; padding: 12px 24px;
+      border-radius: 8px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #007acc; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">KSI INTERNATIONAL</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Directors & Officers Liability Insurance</h1>
+  </section>
+
+  <section class="content">
+    <h2>Protecting Leadership in a Complex World</h2>
+    <p>Directors and Officers (D&O) Liability Insurance is a crucial component in modern corporate governance. As leaders navigate increasingly complex regulatory environments and stakeholder expectations, the personal risk they bear has never been greater. D&O Insurance safeguards executives against claims made by shareholders, employees, regulators, and third parties for actual or alleged wrongful acts in their managerial capacity.</p>
+    <p>Claims can arise from mismanagement, breach of duty, errors in judgment, failure to comply with laws, or financial misrepresentation. In today's volatile economic and legal climate, such allegations are more common—and more damaging—than ever. Without protection, the personal assets of directors and officers can be at stake.</p>
+    <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9c9" alt="Boardroom" />
+    <p>KSI INTERNATIONAL offers bespoke D&O solutions, providing comprehensive legal defense and settlement support. Our policies are designed to address both traditional and emerging risks, including cyber liability, environmental litigation, and international compliance violations. Whether you're leading a startup or a multinational enterprise, our coverage adapts to your evolving needs.</p>
+    <video autoplay muted loop playsinline src="videos/directors-liability.mp4"></video>
+    <p>With our global reach and deep understanding of regulatory standards, we help leaders maintain their focus on strategy and innovation—confident in the knowledge that they are protected against personal financial loss. Directors & Officers Liability Insurance is not just a safety net—it's a sign of forward-thinking leadership.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+  </section>
+
+  <section class="form-section">
+    <h2>Ask Us a Question</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Type your question here..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector('nav ul');
+      navList.classList.toggle('active');
+    }
+    ScrollReveal().reveal('.hero h1', { delay: 200, origin: 'top', distance: '50px', duration: 1000 });
+    ScrollReveal().reveal('.content', { delay: 300, origin: 'bottom', distance: '50px', duration: 1200 });
+    ScrollReveal().reveal('.form-section', { delay: 400, origin: 'left', distance: '50px', duration: 1000 });
+  </script>
+</body>
+</html>
