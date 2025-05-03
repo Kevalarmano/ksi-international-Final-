@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us – KSI INTERNATIONAL</title>
+  <style>
+    /* Reset & Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f6f8; color: #333; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Navbar */
+    nav { background: #002244; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { color: #ff9800; font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav ul li { position: relative; }
+    nav ul li a { color: white; padding: 0.5rem 1rem; transition: background 0.3s; border-radius: 4px; }
+    nav ul li a:hover { background: rgba(255, 153, 0, 0.2); }
+    nav ul li .dropdown-content {
+      display: none; position: absolute; top: 100%; left: 0;
+      background: #003366; border-radius: 4px; overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    nav ul li:hover .dropdown-content { display: block; }
+    nav ul li .dropdown-content a {
+      display: block; padding: 0.5rem 1rem; white-space: nowrap;
+    }
+    nav ul li .dropdown-content a:hover { background: #ff9800; color: #002244; }
+
+    /* Hero */
+    .hero {
+      background: url('Images/about-hero.jpg') center/cover no-repeat;
+      height: 300px; position: relative; display: flex;
+      align-items: center; justify-content: center; color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero h1 { font-size: 3rem; }
+
+    /* Container */
+    .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+    /* About Content */
+    .about-image { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+    .about-text p { margin-bottom: 1rem; }
+
+    /* Footer */
+    footer { background: #002244; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">KSI INTERNATIONAL</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▼</a>
+        <div class="dropdown-content">
+          <a href="cyber-liability.html">Cyber Liability</a>
+          <a href="broadform-liability.html">Broadform Liability</a>
+          <a href="professional-indemnity.html">Professional Indemnity</a>
+          <a href="medical-malpractice.html">Medical Malpractice</a>
+          <a href="directors-officers.html">Directors &amp; Officers Liability</a>
+          <a href="environmental-liability.html">Environmental Liability</a>
+          <a href="marine-insurance.html">Marine Insurance</a>
+          <a href="engineering-insurance.html">Engineering Insurance</a>
+        </div>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About Us</h1>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <img src="Images/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Our Team Collaborating" class="about-image">
+
+    <div class="about-text">
+      <p>At KSI INTERNATIONAL, our story began with a simple but powerful insight: businesses deserve insurance partners who truly understand the intricacies of modern risk. In 2010, our founders—veterans in underwriting, risk management, and financial services—came together over shared frustration. They saw companies paying premiums year after year, only to find their coverage inadequate the moment they needed it most.</p>
+
+      <p>Motivated by real-world experiences working with both global enterprises and family-run businesses, we set out to change the game. We envisioned an organization that went beyond policy issuance—a partner that would sit at the table with decision‑makers, forecast potential exposures, and design bespoke solutions that evolve as businesses grow.</p>
+
+      <p>From our first small office in Johannesburg, we built a culture rooted in collaboration. Every claim we’ve handled, every audit we’ve performed, reinforced our conviction: insurance is not just a safety net—it’s a cornerstone of business confidence. We invested in advanced analytics, hired industry experts across technology, healthcare, and manufacturing, and forged alliances with reinsurers to secure the best terms for our clients.</p>
+
+      <p>As the digital age accelerated, new threats emerged—cyberattacks, supply-chain disruptions, and regulatory complexities. We responded by launching specialized divisions: Cyber Liability in 2015, Environmental Liability in 2017, and most recently, Professional Indemnity for emerging tech startups. Each division is staffed by dedicated teams who speak your language and anticipate tomorrow’s challenges today.</p>
+
+      <p>Our mission transcends selling policies. We deliver insights. We run workshops on crisis management. We simulate worst‑case scenarios alongside our clients’ leadership teams. Whether it’s a crippling data breach or a multi‑million‑dollar product recall, we stand ready 24/7, ensuring that claims are resolved swiftly and reputations remain intact.</p>
+
+      <p>Today, KSI INTERNATIONAL proudly serves clients on six continents. Yet our greatest achievement is closer to home: long‑standing partnerships built on transparency, respect, and relentless expertise. CEOs trust us not just for coverage, but for counsel—inviting us into boardrooms to help shape resilient strategies.</p>
+
+      <p>Looking ahead, we remain committed to innovation. We’re piloting AI‑driven risk‑assessment tools, exploring parametric insurance for climate‑related events, and expanding our reach into high‑growth markets. But no matter how large we grow or how cutting‑edge our offerings become, our founding principle endures: be more than an insurer—be a lifelong ally in your success.</p>
+
+      <p>Thank you for considering KSI INTERNATIONAL. We started this company to bridge the gap between risk and opportunity, and we invite you to join us on the journey. Together, we’ll navigate uncertainty, capitalize on tomorrow’s possibilities, and build a future where your ambitions are always protected.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 KSI INTERNATIONAL | Created by the Armano Group | All rights reserved
+  </footer>
+
+</body>
+</html>

@@ -1,278 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - KSI INTERNATIONAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --nav-bg: #001f3f;
+      --accent: #0099ff;
+      --text-light: #f4f6f8;
+      --text-dark: #ffffff;
+      --card-bg: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+      font-family: 'Montserrat', sans-serif;
+      background: #f0f2f5;
+      color: var(--text-dark);
     }
-
-    .contact-container {
-      text-align: center;
-      padding: 20px;  
+    .banner {
+      background: url('Images/contact-banner.jpg') center/cover no-repeat;
+      height: 200px;
+      position: relative;
     }
-
-    h1 {
-      color: #333;
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 15, 63, 0.6);
     }
-
-    .contact-info {
+    nav {
+      background: var(--nav-bg);
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin: 20px 0;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
-    .contact-image {
-      width: 150px;
-      height: 150px;
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .navbar a {
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 10px 18px;
+      font-weight: 600;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+    .navbar a:hover {
+      background: var(--accent);
+    }
+    .dropdown { position: relative; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      background: var(--nav-bg);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: var(--text-light);
+    }
+    .dropdown-content a:hover {
+      background: var(--accent);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      background: var(--card-bg);
       border-radius: 8px;
-      margin-right: 20px;
+      padding: 20px;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-
+    .contact-info img {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
     .contact-details {
-      text-align: left;
+      flex: 1;
+      color: var(--nav-bg);
     }
-
-    #map {
+    .contact-details h2 { margin-bottom: 10px; }
+    .contact-details p { margin-bottom: 8px; }
+    #map-iframe {
       width: 100%;
       height: 400px;
-      margin-top: 20px;
-    }
-
-    .message-form {
-      margin-top: 20px;
-      text-align: left;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 20px;
-      background-color: #fff;
+      border: 0;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 30px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-
+    .message-form {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+    }
+    .message-form h3 {
+      margin-bottom: 15px;
+      color: var(--nav-bg);
+    }
     .message-form input,
     .message-form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
     }
-
     .message-form button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
+      background: var(--accent);
+      color: var(--text-dark);
+      padding: 12px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
     }
-
     .message-form button:hover {
-      background-color: #45a049;
+      background: #0088cc;
+    }
+    footer {
+      background: var(--nav-bg);
+      color: var(--text-light);
+      text-align: center;
+      padding: 15px;
+    }
+    @media (max-width: 600px) {
+      .contact-info { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <style>
-    /* General Styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
+  <!-- Banner -->
+  <div class="banner"></div>
 
-    /* Navbar Styles */
-    nav {
-        background: linear-gradient(45deg, #007bff, #00d4ff);
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .navbar {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar li {
-        position: relative;
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    /* Button Styling */
-    .navbar a {
-        text-decoration: none;
-        color: white;
-        background: #003366;
-        padding: 12px 20px;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: 0.3s ease;
-        display: inline-block;
-    }
-
-    .navbar a:hover {
-        background: #0055a4;
-    }
-
-    /* Dropdown Menu */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background: white;
-        min-width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        overflow: hidden;
-        z-index: 1000;
-        top: 40px;
-        left: 0;
-    }
-
-    .dropdown-content li {
-        display: block;
-    }
-
-    .dropdown-content a {
-        color: #333;
-        background: white;
-        padding: 10px 15px;
-        display: block;
-        text-align: left;
-        transition: 0.3s;
-    }
-
-    .dropdown-content a:hover {
-        background: #007bff;
-        color: white;
-    }
-
-    /* Show Dropdown on Hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 600px) {
-        .navbar {
-            flex-direction: column;
-        }
-
-        .dropdown-content {
-            position: relative;
-            top: 0;
-        }
-    }
-</style>
-
-<nav>
-  <ul class="navbar">
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
       <li><a href="index.html">Home</a></li>
       <li><a href="about us.html">About Us</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li class="dropdown">
-          <a href="services.html" class="dropbtn">Services ▼</a>
-          <ul class="dropdown-content">
-              <li><a href="#">Cyber Liability</a></li>
-              <li><a href="#">Broadform Liability</a></li>
-              <li><a href="#">Professional Indemnity</a></li>
-              <li><a href="#">Medical Malpractice</a></li>
-              <li><a href="#">Directors & Officers Liability</a></li>
-              <li><a href="#">Environmental Liability</a></li>
-              <li><a href="#">Marine Insurance</a></li>
-              <li><a href="#">Engineering Insurance</a></li>
-          </ul>
+        <a href="services.html">Services ▼</a>
+        <div class="dropdown-content">
+          <a href="#">Cyber Liability</a>
+          <a href="#">Broadform Liability</a>
+          <a href="#">Professional Indemnity</a>
+          <a href="#">Medical Malpractice</a>
+          <a href="#">Directors & Officers</a>
+          <a href="#">Environmental Liability</a>
+          <a href="#">Marine Insurance</a>
+          <a href="#">Engineering Insurance</a>
+        </div>
       </li>
-  </ul>
-</nav>
+    </ul>
+  </nav>
 
-<script>
-  // Optional JavaScript for Clickable Dropdown (For mobile users)
-  document.addEventListener("DOMContentLoaded", function() {
-      let dropdown = document.querySelector(".dropdown");
-      dropdown.addEventListener("click", function(event) {
-          event.stopPropagation();
-          let dropdownContent = this.querySelector(".dropdown-content");
-          dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-      });
-
-      // Close dropdown when clicking elsewhere
-      document.addEventListener("click", function() {
-          let dropdownContent = document.querySelector(".dropdown-content");
-          if (dropdownContent) dropdownContent.style.display = "none";
-      });
-  });
-</script>
-
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Contact Info -->
     <div class="contact-info">
-      <img src="Images/annie-spratt-vGgn0xLdy8s-unsplash.jpg" alt="Your Image" class="contact-image">
+      <img src="contact.html" alt="Our Office" />
       <div class="contact-details">
-        <p><strong>Address:</strong> Suite 4, Sarabeah House, 333 Randles Road, Overport, 4091, South Africa</p>
-        <p><strong>Contact Number:</strong> (+27)064 626 6242</p>
-        <p><strong>Telephone Number:</strong> (+27)031 207 8787</p>
+        <h2>Get in Touch</h2>
+        <p><strong>Address:</strong><br>Suite 4, Sarabeah House,<br>333 Randles Road, Overport, Durban 4091</p>
+        <p><strong>Mobile:</strong> (+27) 064 626 6242</p>
+        <p><strong>Phone:</strong> (+27) 031 207 8787</p>
+        <p><strong>Email:</strong> contact@ksi-international.com</p>
       </div>
     </div>
 
-    <div id="map"></div>
+    <!-- OpenStreetMap Embed -->
+    <iframe
+      id="map-iframe"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=31.0039%2C-29.855%2C31.0165%2C-29.845&layer=mapnik&marker=-29.8505%2C31.0100"
+      allowfullscreen>
+    </iframe>
+    <p style="text-align:center; margin-bottom:40px; color: #002244;"><a href="https://www.openstreetmap.org/?mlat=-29.8505&mlon=31.0100#map=16/-29.8505/31.0100" target="_blank">View Larger Map</a></p>
 
-    <!-- Message Us Form -->
+    <!-- Contact Form -->
     <div class="message-form">
-      <h2>Message Us</h2>
+      <h3>Send Us a Message</h3>
       <form action="mailto:armano.international@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
       </form>
     </div>
   </div>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-  <script>
-    function initMap() {
-      var location = { lat: -29.8577, lng: 31.0195 }; // Coordinates for the given address (adjust if needed)
+  <!-- Footer -->
+  <footer>
+    © 2025 KSI INTERNATIONAL | Created by the Armano Group | All rights reserved
+  </footer>
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: location
-      });
-
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: 'Suite 4, Sarabeah House, 333 Randles Road'
-      });
-    }
-  </script>
- <footer>
-  <center>
-  <p>2025 - KSI INTERNATIONAL | Created by the Armano Group | All rights reserved</p>
-  </center>
-</footer>
 </body>
 </html>
