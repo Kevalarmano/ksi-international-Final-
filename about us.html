@@ -1,167 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - KSI INTERNATIONAL</title>
-    <style>
-        /* General Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - KSI INTERNATIONAL</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        /* Navigation Bar */
-        nav {
-            background: #002244;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    /* Navigation Bar */
+    nav {
+      background: #002244;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: url('Images/ian-schneider-TamMbr4okv4-unsplash.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        .hero-content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
+    /* Hero Section */
+    .hero {
+      background: url('Images/ian-schneider-TamMbr4okv4-unsplash.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-        /* About Section */
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .about-content img {
-            width: 50%;
-            border-radius: 10px;
-        }
-        .text {
-            width: 45%;
-        }
-        .text h2 {
-            color: #002244;
-        }
-        .text p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        button {
-            background-color: #ff9800;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #e68900;
-        }
+    /* About Section */
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .about-content img {
+      width: 50%;
+      border-radius: 10px;
+    }
+    .text {
+      width: 45%;
+    }
+    .text h2 {
+      color: #002244;
+    }
+    .text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #e68900;
+    }
 
-        /* Hidden Text */
-        .hidden {
-            display: none;
-        }
+    /* Hidden Text */
+    .hidden {
+      display: none;
+    }
 
-        /* Footer */
-        .footer {
-            background-color: #002244;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            width: 100%;
-        }
-    </style>
+    /* Map Styling */
+    .map-container {
+      margin-top: 30px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <div class="dropdown">
-            <a href="services.html">Services</a>
-            <div class="dropdown-content">
-                <a href="#">Cyber Liability</a>
-                <a href="#">Broadform Liability</a>
-                <a href="#">Professional Indemnity</a>
-                <a href="#">Medical Malpractice</a>
-                <a href="#">Directors & Officers Liability</a>
-                <a href="#">Environmental Liability</a>
-                <a href="#">Marine Insurance</a>
-                <a href="#">Engineering Insurance</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+      <a href="services.html">Services</a>
+      <div class="dropdown-content">
+        <a href="#">Cyber Liability</a>
+        <a href="#">Broadform Liability</a>
+        <a href="#">Professional Indemnity</a>
+        <a href="#">Medical Malpractice</a>
+        <a href="#">Directors & Officers Liability</a>
+        <a href="#">Environmental Liability</a>
+        <a href="#">Marine Insurance</a>
+        <a href="#">Engineering Insurance</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>About KSI INTERNATIONAL</h1>
-            <p>Global Leaders in Risk Management & Insurance Solutions</p>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About KSI INTERNATIONAL</h1>
+      <p>Global Leaders in Risk Management & Insurance Solutions</p>
+    </div>
+  </section>
 
-    <!-- About Us Section -->
-    <div class="container">
-        <div class="about-content">
-            <img src="Images/campaign-creators-e6n7uoEnYbA-unsplash.jpg" alt="About Us Image">
-            <div class="text">
-                <h2>Who We Are</h2>
-                <p>KSI INTERNATIONAL is a trusted global leader in insurance solutions, providing businesses with comprehensive risk management and financial protection.</p>
-                <button onclick="showMore()">Learn More</button>
-                <p id="more-text" class="hidden">With decades of experience, we have helped businesses worldwide safeguard their assets through customized insurance policies tailored to meet industry-specific needs.</p>
-            </div>
-        </div>
+  <!-- About Us Section -->
+  <div class="container">
+    <div class="about-content">
+      <img src="Images/campaign-creators-e6n7uoEnYbA-unsplash.jpg" alt="About Us Image">
+      <div class="text">
+        <h2>Who We Are</h2>
+        <p>KSI INTERNATIONAL is a trusted global leader in insurance solutions, providing businesses with comprehensive risk management and financial protection.</p>
+        <button onclick="showMore()">Learn More</button>
+        <p id="more-text" class="hidden">With decades of experience, we have helped businesses worldwide safeguard their assets through customized insurance policies tailored to meet industry-specific needs.</p>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>2025 - KSI INTERNATIONAL | Created by the Armano Group | All rights reserved</p>
-    </footer>
+    <!-- Map Section -->
+    <div class="map-container">
+      <h2 style="color:#002244;">Visit Us at 333 Randles Road, Overport, Durban</h2>
+      <iframe 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=31.0039%2C-29.855%2C31.0165%2C-29.845&layer=mapnik&marker=-29.8505%2C31.0100"
+        allowfullscreen>
+      </iframe>
+      <p style="text-align: center; margin-top: 10px;">
+        <a href="https://www.openstreetmap.org/?mlat=-29.8505&mlon=31.0100#map=16/-29.8505/31.0100" target="_blank" style="color:#002244;">
+          View Larger Map
+        </a>
+      </p>
+    </div>
+  </div>
 
-    <script>
-        function showMore() {
-            let text = document.getElementById('more-text');
-            if (text.style.display === "none" || text.style.display === "") {
-                text.style.display = "block";
-            } else {
-                text.style.display = "none";
-            }
-        }
-    </script>
-<footer>
-    <center>
+  <!-- Footer -->
+  <footer class="footer">
     <p>2025 - KSI INTERNATIONAL | Created by the Armano Group | All rights reserved</p>
-    </center>
   </footer>
+
+  <script>
+    function showMore() {
+      let text = document.getElementById('more-text');
+      if (text.style.display === "none" || text.style.display === "") {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>
